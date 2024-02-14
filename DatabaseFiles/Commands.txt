@@ -1,0 +1,31 @@
+
+DROP DATABASE project;
+CREATE DATABASE project;
+USE project;
+
+#Linux:
+SOURCE /mnt/1E9400C69400A27F/Mini Project/Project/Tables.sql
+SOURCE /mnt/1E9400C69400A27F/Mini Project/Project/Script.sql
+SOURCE /mnt/1E9400C69400A27F/Mini Project/Project/Data.sql
+
+Windows:
+SOURCE D:\7.CDAC\Mini-Project\Project\DatabaseFiles/Tables.sql;
+SOURCE D:\7.CDAC\Mini-Project\Project\DatabaseFiles/Script.sql;
+SOURCE D:\7.CDAC\Mini-Project\Project\DatabaseFiles/Data.sql;
+
+-- Procedures
+	SELECT ROUTINE_NAME 
+	FROM INFORMATION_SCHEMA.ROUTINES 
+	WHERE ROUTINE_TYPE="PROCEDURE" 
+	AND ROUTINE_SCHEMA="project";
+
+-- Functions
+	SELECT ROUTINE_NAME 
+	FROM INFORMATION_SCHEMA.ROUTINES 
+	WHERE ROUTINE_TYPE="FUNCTION" 
+	AND ROUTINE_SCHEMA="project";
+
+-- Triggers
+	SELECT TRIGGER_NAME 
+	FROM INFORMATION_SCHEMA.TRIGGERS 
+	WHERE TRIGGER_SCHEMA = 'project';
